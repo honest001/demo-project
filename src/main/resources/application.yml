@@ -1,0 +1,15 @@
+spring:
+  application:
+      name: okplus
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/okplus?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+
+server:
+  port: 18087
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
