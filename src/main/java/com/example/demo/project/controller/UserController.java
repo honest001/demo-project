@@ -1,6 +1,7 @@
 package com.example.demo.project.controller;
 
 
+import com.example.demo.project.dto.BatchAddUserDto;
 import com.example.demo.project.dto.UserDto;
 import com.example.demo.project.model.User;
 import com.example.demo.project.service.UserService;
@@ -59,4 +60,8 @@ public class UserController {
         return userService.list(page,size,userName);
     }
 
+    @PostMapping("/batchAddUser")
+    public Object batchAddUser(@RequestBody BatchAddUserDto batchAddUserDto){
+         return userService.BatchAddUser(batchAddUserDto);
+    }
 }

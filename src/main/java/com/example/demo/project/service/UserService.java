@@ -1,9 +1,12 @@
 package com.example.demo.project.service;
 
 
+import com.example.demo.project.dto.BatchAddUserDto;
 import com.example.demo.project.dto.UserDto;
 import com.example.demo.project.model.User;
 import com.github.pagehelper.PageInfo;
+
+import java.util.List;
 
 public interface UserService {
   /**
@@ -42,5 +45,12 @@ public interface UserService {
      * @return
      */
     PageInfo<User> list(Integer page, Integer size, String userName);
+
+  /**
+   * 批量添加用户
+   * @param batchAddUserDto
+   * @return
+   */
+  List<User> BatchAddUser(BatchAddUserDto batchAddUserDto);
 
 }
